@@ -3,4 +3,4 @@
 This repo demonstrates..
 
 > [!NOTE]
-> Qualcomm Arduino Uno Q was kindly provided by Hackster.io.
+> Qualcomm Arduino Uno Q (4G) was kindly provided by Hackster.io.
