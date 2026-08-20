@@ -1,1 +1,10 @@
-test
+profiles:
+  default:
+    platforms:
+      - platform: arduino:zephyr
+    libraries:
+      - Adafruit BNO055 (1.6.4)
+      - dependency: Adafruit Unified Sensor (1.1.15)
+      - dependency: Adafruit BusIO (1.17.4)
+      - Madgwick (1.2.0)
+default_profile: default
