@@ -3,4 +3,4 @@
 This repo demonstrates how to use Arduino Uno Q to "sense" electromagnetic inference (EMI) hazards. Uno Q board is a dual-brain solution, that has both MPU (from Qualcomm) and MCU (from ST Microelectronic) processing capabilities.
 
 > [!NOTE]
-> Qualcomm Arduino Uno Q (4G) was kindly provided by Hackster.io.
+> Qualcomm Arduino Uno Q board (with 4G RAM) was kindly provided by Hackster.io.
