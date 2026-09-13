@@ -1,0 +1,10 @@
+name: UNO-Twin
+icon: 🛰
+description: Real-time digital twin with predictive EMI sensing on the Arduino UNO Q.
+
+# 7788 = optional raw-WebSocket telemetry feed for the standalone dashboard.
+# The primary UI is served by the web_ui brick.
+ports: [7788]
+
+bricks:
+  - arduino:web_ui
