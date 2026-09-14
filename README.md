@@ -5,7 +5,7 @@ Invisible electromagnetic hazards may cause robot sensors to drift and their nav
 This repo contains the source code for **UNO-Twin** app, a real-time digital twin that detects electromagnetic interference (EMI) and visualises it as a 3D "sensing aura". Using an *Arduino UNO Q* and a *Bosch BNO055* 9-axis sensor, this app mirrors the robot's live orientation and flags potential EMI risks.
 
 > [!TIP]
-> This project was built for the [Invent the Future with Arduino UNO Q and App Lab](https://www.hackster.io/contests/invent-the-future-with-arduino-uno-q-and-app-lab) hackathon. Qualcomm Arduino Uno Q board (with 4G RAM) was kindly provided by the Arduino and Hackster teams, thank you!
+> This project was built for the [Invent the Future with Arduino UNO Q and App Lab](https://www.hackster.io/contests/invent-the-future-with-arduino-uno-q-and-app-lab) contest. Qualcomm Arduino Uno Q board (with 4G RAM) was kindly provided by the Arduino, Qualcomm and Hackster teams, thank you!
 
 ## 📑 Table of Contents
 
