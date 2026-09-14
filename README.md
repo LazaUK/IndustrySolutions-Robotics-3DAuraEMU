@@ -2,7 +2,7 @@
 
 Invisible electromagnetic hazards may cause robot sensors to drift and their navigation to fail.
 
-This repo contains the source code for **UNO-Twin** app, a real-time digital twin that detects electromagnetic interference (EMI) and visualise it as a 3D "sensing aura". Using an *Arduino UNO Q* and a *Bosch BNO055* 9-axis sensor, this solution mirrors the robot's live orientation and flags potential EMI risks.
+This repo contains the source code for **UNO-Twin** app, a real-time digital twin that detects electromagnetic interference (EMI) and visualise it as a 3D "sensing aura". Using an *Arduino UNO Q* and a *Bosch BNO055* 9-axis sensor, this app mirrors the robot's live orientation and flags potential EMI risks.
 
 > [!TIP]
 > This project was built for the [Invent the Future with Arduino UNO Q and App Lab](https://www.hackster.io/contests/invent-the-future-with-arduino-uno-q-and-app-lab) hackathon. Qualcomm Arduino Uno Q board (with 4G RAM) was kindly provided by the Arduino and Hackster teams, thank you!
@@ -13,8 +13,6 @@ This repo contains the source code for **UNO-Twin** app, a real-time digital twi
 - [Detection Layer: Hard-Iron Calibration](#detection-layer-hard-iron-calibration)
 - [Detection Layer: Anomaly Scoring](#detection-layer-anomaly-scoring)
 - [Visualisation Layer: The 3D Twin](#visualisation-layer-the-3d-twin)
-- [Deploying Without Installing Anything](#deploying-without-installing-anything)
-- [Repository Layout](#repository-layout)
 - [Demos & Results](#demos--results)
 
 ## Hardware Setup
@@ -88,3 +86,8 @@ The aura shifts from blue through amber to red as the score increases, and the r
 
 > [!TIP]
 > 3D model of robotic helicopter was built in Blender v5.2, by following Blender tutorial of Ryan King, thank you!
+
+## Demos & Results
+
+- Project submission: *(link to follow)*
+- Video demonstration: *(link to follow)*
