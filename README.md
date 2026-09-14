@@ -68,3 +68,21 @@ Two further safeguards were put in place:
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Baseline gate (2.5σ) | A source present but below alert level would otherwise be *learned as normal*, inflating sigma and suppressing its own detection |
 | Alert freeze (7σ)    | A stationary hazard would otherwise fade from the baseline within one window and clear its own alert                             |
+
+## Visualisation Layer: The 3D Twin
+
+The dashboard is a single self-contained HTML file served by the `web_ui` brick in Arduino App Lab, using three.js visualisation for 3D twin, the aura and the EMI radar.
+
+```javascript
+// Model forward is +Z; the dashboard reference is +X, a quarter turn away.
+// Yaw is applied first in YXZ order, so the offset is a world-space spin
+// that leaves pitch and roll untouched.
+const MODEL_YAW_OFFSET = Math.PI/2;
+robot.rotation.order = "YXZ";
+robot.rotation.y = -sm.yaw*D + MODEL_YAW_OFFSET;
+```
+
+The aura shifts from blue through amber to red as the score increases, and the radar sweep marks a detected source at its bearing — holding it until the next scan completes.
+
+> [!TIP]
+> 3D model of robotic helicopter was built in Blender v5.2, by following Blender tutorial of Ryan King, thank you!
