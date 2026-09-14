@@ -93,4 +93,4 @@ The aura shifts from blue through amber to red as the score increases, and the r
 ## Demos & Results
 
 - Project submission: *(link to follow)*
-- Video demonstration: *(link to follow)*
+- Video demonstration: [YouTube video](https://youtu.be/FNM0b1PCSt0)
