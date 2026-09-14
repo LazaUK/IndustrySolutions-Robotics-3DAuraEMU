@@ -7,7 +7,6 @@ Invisible electromagnetic hazards may cause robot sensors to drift and their nav
 
 ## 📑 Table of Contents
 
-- [The Invisible Hazard Problem](#the-invisible-hazard-problem)
 - [Hardware Setup](#hardware-setup)
 - [Dual-Brain Architecture](#dual-brain-architecture)
 - [Detection Layer: Hard-Iron Calibration](#detection-layer-hard-iron-calibration)
@@ -17,9 +16,18 @@ Invisible electromagnetic hazards may cause robot sensors to drift and their nav
 - [Repository Layout](#repository-layout)
 - [Demos & Results](#demos--results)
 
-# Industrial Robotics: Digital Twin with 3D EMI Aura
+## Hardware Setup
 
-This repo demonstrates how to use Arduino Uno Q to "sense" electromagnetic inference (EMI) hazards. Uno Q board is a dual-brain solution, that has both MPU (from Qualcomm) and MCU (from ST Microelectronic) processing capabilities. MCU can be used to process sensor data real-time, while MPU can host a user-facing app to visualise interactive content.
+![Wiring schematic](images/UnoTwin_Schematics.png)
 
-> [!NOTE]
-> 
+| Component               | Purpose        | Notes                                      |
+| ----------------------- | -------------- | ------------------------------------------ |
+| Arduino UNO Q           | Compute        | Dragonwing MPU + STM32U585 MCU             |
+| Bosch BNO055 breakout   | 9-axis sensing | Adafruit STEMMA QT #4646 or SparkFun Qwiic |
+| Qwiic / STEMMA QT cable | Power + I²C    | JST-SH 4-pin, keyed                        |
+
+The Qwiic connector is typically wired to **`Wire1`**. The sketch probes both `Wire1` and `Wire` at addresses `0x28` and `0x29`, so either breakout variant is found automatically.
+
+> [!IMPORTANT]
+> The BNO055 runs in **AMG (raw) mode** on purpose. Its on-chip fusion modes power the magnetometer down, as this project utilises the raw magnetic flux.
+
