@@ -5,7 +5,7 @@ This repo contains the source code for **UNO-Twin** app, a real-time digital twi
 Invisible electromagnetic hazards may cause robot sensors to drift and their navigation to fail. Using an *Arduino UNO Q* and a *Bosch BNO055* 9-axis sensor, this solution mirrors the robot's live orientation and flags interference risks in realtime.
 
 > [!TIP]
-> This project was built for the [Arduino UNO Q Hackathon](https://www.hackster.io/contests/arduino-uno-q). Qualcomm Arduino Uno Q board (with 4G RAM) was kindly provided by Hackster.io team, thank you!
+> This project was built for the [Invent the Future with Arduino UNO Q and App Lab](https://www.hackster.io/contests/invent-the-future-with-arduino-uno-q-and-app-lab) hackathon. Qualcomm Arduino Uno Q board (with 4G RAM) was kindly provided by the Arduino and Hackster teams, thank you!
 
 ## 📑 Table of Contents
 
