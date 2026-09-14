@@ -2,7 +2,7 @@
 
 Invisible electromagnetic hazards may cause robot sensors to drift and their navigation to fail.
 
-This repo contains the source code for **UNO-Twin** app, a real-time digital twin that detects electromagnetic interference (EMI) and visualise it as a 3D "sensing aura". Using an *Arduino UNO Q* and a *Bosch BNO055* 9-axis sensor, this app mirrors the robot's live orientation and flags potential EMI risks.
+This repo contains the source code for **UNO-Twin** app, a real-time digital twin that detects electromagnetic interference (EMI) and visualises it as a 3D "sensing aura". Using an *Arduino UNO Q* and a *Bosch BNO055* 9-axis sensor, this app mirrors the robot's live orientation and flags potential EMI risks.
 
 > [!TIP]
 > This project was built for the [Invent the Future with Arduino UNO Q and App Lab](https://www.hackster.io/contests/invent-the-future-with-arduino-uno-q-and-app-lab) hackathon. Qualcomm Arduino Uno Q board (with 4G RAM) was kindly provided by the Arduino and Hackster teams, thank you!
@@ -37,10 +37,13 @@ The UNO Q is located next to the sensor and that's why contributes with its own 
 A sphere fit over samples collected while rotating the board recovers the offset, which is then subtracted from every reading and persisted to `hard_iron.json`.
 
 ```python
-# From main.py: the fit only converges if the sensor sees enough of the sphere
-span = max(axis_max[i] - axis_min[i] for i in range(3))
-if span >= CAL_SPAN and len(_cal_pts) >= CAL_MIN_PTS:
-    _hard_iron = _fit_sphere(_cal_pts)
+# From main.py: the fit only runs once every axis has swept enough of the sphere
+if len(_cal_pts) < CAL_POINTS // 3:
+    return
+if not all(_cal_hi[i] - _cal_lo[i] >= CAL_SPAN for i in range(3)):
+    return
+
+centre = _sphere_fit(_cal_pts)
 ```
 
 Measured on the provided Arduino UNO Q hardware, the residual body-fixed offset was **2.35 µT** against a 49.16 µT local field.
@@ -85,7 +88,7 @@ The aura shifts from blue through amber to red as the score increases, and the r
 ![Blender_Model](images/UnoTwin_Blender.png)
 
 > [!TIP]
-> 3D model of robotic helicopter was built in Blender v5.2, by following Blender tutorial of Ryan King, thank you!
+> 3D model of robotic helicopter was built in Blender v5.2, by following a Blender tutorial of Ryan King, thank you!
 
 ## Demos & Results
 
