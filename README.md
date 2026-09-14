@@ -84,5 +84,7 @@ robot.rotation.y = -sm.yaw*D + MODEL_YAW_OFFSET;
 
 The aura shifts from blue through amber to red as the score increases, and the radar sweep marks a detected source at its bearing — holding it until the next scan completes.
 
+![Blender_Model](images/UnoTwin_Blender.png)
+
 > [!TIP]
 > 3D model of robotic helicopter was built in Blender v5.2, by following Blender tutorial of Ryan King, thank you!
