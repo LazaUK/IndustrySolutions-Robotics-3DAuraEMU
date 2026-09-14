@@ -92,5 +92,5 @@ The aura shifts from blue through amber to red as the score increases, and the r
 
 ## Demos & Results
 
-- Project submission: *(link to follow)*
+- Project submission: [Hackster_project](https://www.hackster.io/user87111/uno-twin-3d-sensing-aura-for-emi-sensitive-robotics-5954ab)
 - Video demonstration: [YouTube video](https://youtu.be/FNM0b1PCSt0)
